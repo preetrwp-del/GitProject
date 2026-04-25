@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Event Listener Example</title>
+
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Event Listener Advanced Demo</h2>
+
+    <!-- Button -->
+    <button id="btn">Double Click Me</button>
+    <p id="output"></p>
+
+    <!-- Input Field -->
+    Enter Text: <input type="text" id="inputBox">
+    <p id="message"></p>
+
+    <!-- Box -->
+    <div id="box">Press a Key</div>
+
+    <script>
+        // Double Click Event
+        let button = document.getElementById("btn");
+        button.addEventListener("dblclick", function() {
+            document.getElementById("output").innerHTML = "Button Double Clicked!";
+        });
+
+        // Focus Event
+        let input = document.getElementById("inputBox");
+        input.addEventListener("focus", function() {
+            input.style.backgroundColor = "lightyellow";
+            document.getElementById("message").innerHTML = "Input field is active";
+        });
+
+        // Blur Event
+        input.addEventListener("blur", function() {
+            input.style.backgroundColor = "white";
+            document.getElementById("message").innerHTML = "Input field lost focus";
+        });
+
+        // Keydown Event
+        document.addEventListener("keydown", function(event) {
+            let keyPressed = event.key;
+            document.getElementById("box").innerHTML = "Key: " + keyPressed;
+        });
+    </script>
+
+</body>
+</html>

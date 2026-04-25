@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="title">Checkout 🧾</h1>
+
+<div style="text-align:center; margin-top:30px;">
+    <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <input type="email" id="email" placeholder="Enter your email"><br><br>
+    <input type="text" id="phone" placeholder="Enter phone number"><br><br> 
+    <input type="text" id="address" placeholder="Enter your address"><br><br>
+    <input type="text" id="pincode" placeholder="Enter pincode"><br><br>
+    <button onclick="placeOrder()">Place Order 💳</button>
+</div>
+
+<script>
+function placeOrder() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+    let pincode = document.getElementById("pincode").value;
+    
+    if(name === "" || email === "" || phone === "" || address === "" || pincode === "") {
+        alert("Please fill all details ❗");
+        return;
+    }
+
+    alert("Order placed successfully 🎉\nThank you " + name + "!");
+
+    localStorage.removeItem("cart"); // clear cart
+
+    window.location.href = "home.html"; // go back to home
+}
+</script>
+
+</body>
+</html>

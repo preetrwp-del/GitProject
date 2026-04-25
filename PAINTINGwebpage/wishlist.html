@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Wishlist ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- not working yet ... icon not working -->
+<body>
+
+    <h1 class="title">Your Wishlist ❤️</h1>
+
+    <div id="wishlist-items" class="gallery"></div>
+
+    <script>
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        let container = document.getElementById("wishlist-items");
+
+        if (wishlist.length === 0) {
+            container.innerHTML = "<p style='text-align:center;'>Your wishlist is empty 💔</p>";
+        }
+
+        wishlist.forEach(item => {
+            container.innerHTML += `
+                <div class="painting-card">
+                    <img src="${item.img}">
+                    <h3>${item.name}</h3>
+                    <p>₹${item.price}</p>
+                </div>
+            `;
+        });
+    </script>
+
+</body>
+</html>

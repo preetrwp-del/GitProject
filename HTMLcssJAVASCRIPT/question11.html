@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers Example</title>
+
+    <script>
+        function showMessage() {
+            document.getElementById("result").innerHTML = "You Clicked button!";
+        }
+
+        function changeColor() {
+            document.body.style.backgroundColor = "#ffff00";
+        }
+
+        function resetColor() {
+            document.body.style.backgroundColor = "white";
+        }
+
+        function showText() {
+            let text = document.getElementById("name").value;
+            document.getElementById("display").innerHTML = "Hello " + text;
+        }
+    </script>
+</head>
+<body>
+    <h2>Event Handlers Demo</h2>
+
+    <!-- Button Click Event -->
+    <button onclick="showMessage()" style="background-color: beige;">Click Me</button>
+    <p id="result" style="color: brown;"></p>
+
+    <!-- Mouse Events -->
+    <div onmouseover="changeColor()" onmouseout="resetColor()"
+         style="width:200px;height:100px;border:1px solid black;">
+         Hover over me
+    </div>
+
+    <br>
+
+    <!-- Keyboard Event -->
+    Enter Name: <input type="text" id="name" onkeyup="showText()">
+    <p id="display" style="color: brown;"></p> 
+</body>
+</html>
+

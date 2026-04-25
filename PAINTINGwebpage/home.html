@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Velora Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        if(localStorage.getItem("loggedIn") !== "true") {
+        window.location.href = "login.html";
+    }
+    </script>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo-section">
+    <img src="images/velora canvas.png" class="logo-img">
+        <div>
+            <h2 class="logo-text">Velora Canvas</h2>
+            <p class="quote">"Where colors speak louder than words"</p>
+        </div>
+    </div>
+    
+        <input type="text" placeholder="Search paintings..." class="search">
+        <div class="icons">
+            <span onclick="goProfile()">👤</span>
+            <span onclick="goWishlist()" style="cursor:pointer;">❤️</span>
+            <span onclick="goCart()" style="cursor:pointer;">
+                🛒 <span id="cart-count">0</span>
+            </span>
+            <span onclick="logout()" style="cursor:pointer;">🚪</span>
+        </div>
+    </div>
+
+    <!-- CATEGORY SECTION -->
+    <h1 class="title">Explore Art Styles</h1>
+
+    <div class="categories">
+
+        <div class="card" onclick="openCategory('nature')">
+            <img src="images/StockCake-Sunset_Ocean_Painting-1238984-small.jpg">
+            <p>Nature</p>
+        </div>
+
+        <div class="card" onclick="openCategory('abstract')">
+            <img src="images/Textured Abstract Painting_ Minimalist Blue Plaster Wall Art.jpg">
+            <p>Abstract</p>
+        </div>
+
+        <div class="card" onclick="openCategory('mandala')">
+            <img src="images/Screenshot 2026-04-15 221621.png">
+            <p>Mandala lippan Art</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

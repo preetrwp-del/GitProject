@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main(){
+    int array[5]={2,3,4,5,6};
+    for(int i=4; i>=0; i--){
+    printf("%d\t",array[i]);}
+    return 0;
+}

@@ -1,0 +1,131 @@
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(to right, #ffd6e0, #e7c6ff);
+}
+
+.search {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+}
+
+.icons span {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo Image */
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.logo-img:hover {
+    transform: scale(3);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+
+}
+
+/* Text beside logo */
+.logo-text {
+    margin: 0;
+    color: #5c0836;
+}
+
+.quote {
+    margin: 0;
+    font-size: 12px;
+    color: #777;
+    font-style: italic;
+}
+
+/* CATEGORY SECTION */
+.title {
+    text-align: center;
+    margin-top: 30px;
+    color: #5c0836;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: rgb(113, 14, 130);
+}
+
+.card img {
+    width: 160px;
+    border-radius: 10px;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.painting-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.painting-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.painting-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.buy-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* cart total styling*/
+#total-price {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2b22aa; /* matches your theme */
+}

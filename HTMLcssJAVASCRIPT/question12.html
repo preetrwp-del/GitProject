@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners </title>
+</head>
+
+<body>
+
+    <h2>Event Listeners example</h2>
+
+    <button id="btn">Click Me</button>
+    <p id="output"></p>
+
+    <div id="box" style="width:200px;height:100px;border:1px solid black;">
+        Hover here
+    </div>
+
+    <br>
+
+    Enter Name: <input type="text" id="name">
+    <p id="display"></p>
+
+    <script>
+        // Button Click Event
+        document.getElementById("btn").addEventListener("click", function() {
+            document.getElementById("output").innerHTML = "Button Clicked!";
+        });
+
+        // Mouse Events
+        let box = document.getElementById("box");
+
+        box.addEventListener("mouseover", function() {
+            document.body.style.backgroundColor = "lightgreen";
+        });
+
+        box.addEventListener("mouseout", function() {
+            document.body.style.backgroundColor = "white";
+        });
+
+        // Keyboard Event
+        document.getElementById("name").addEventListener("keyup", function() {
+            let text = this.value;
+            document.getElementById("display").innerHTML = "Hello " + text;
+        });
+    </script>
+
+</body>
+</html>

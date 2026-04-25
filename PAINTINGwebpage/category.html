@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category - Velora Canvas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo-section">
+    <img src="images/velora canvas.png" class="logo-img">
+        <div>
+            <h2 class="logo-text">Velora Canvas</h2>
+            <p class="quote">"Where colors speak louder than words"</p>
+        </div>
+    </div>
+    
+        <input type="text" placeholder="Search paintings..." class="search">
+        <div class="icons">
+            <span onclick="goProfile()">👤</span>
+            <span onclick="goWishlist()">❤️</span>
+            <span onclick="goCart()">🛒 <span id="cart-count">0</span></span>
+        </div>
+    </div>
+
+    <h1 class="title" id="category-title"></h1>
+    <div class="gallery" id="gallery"></div>
+    <script src="category.js"></script>
+
+</body>
+</html>
